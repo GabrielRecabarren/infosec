@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const helmet = require('helmet');
 
+app.use(helmet.hidePoweredBy());
 
 
 
@@ -50,7 +51,6 @@ const helmet = require('helmet');
 module.exports = app;
 const api = require('./server.js');
 app.use(express.static('public'));
-app.use(helmet.hidePoweredBy());
 
 
 app.disable('strict-transport-security');
