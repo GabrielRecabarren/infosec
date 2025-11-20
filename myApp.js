@@ -2,16 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
-// Usar SOLO hidePoweredBy como pide la prueba
-app.use(helmet.hidePoweredBy());  // ← Así específicamente
-
-// El resto de tus middlewares y rutas
-app.use(express.json());
-// ... tus rutas aquí
-
-app.listen(3000, () => {
-  console.log('Servidor ejecutándose en puerto 3000');
-});
+app.use(helmet.hidePoweredBy());
 
 
 
